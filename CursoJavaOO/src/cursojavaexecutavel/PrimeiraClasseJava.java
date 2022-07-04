@@ -18,12 +18,17 @@ public class PrimeiraClasseJava {
 		String nomeEscola = JOptionPane.showInputDialog("Nome da Escola?");
 		String dataMatricula = JOptionPane.showInputDialog("Data da matricula?");
 		String serieMatriculado = JOptionPane.showInputDialog("Serie matriculado(a)? ");
+		String disciplina1 = JOptionPane.showInputDialog("Disciplina 1:");
 		String nota1 = JOptionPane.showInputDialog("Nota 1:");
+		String disciplina2 = JOptionPane.showInputDialog("Disciplina 2:");
 		String nota2 = JOptionPane.showInputDialog("Nota 2:");
+		String disciplina3 = JOptionPane.showInputDialog("Disciplina 3:");
 		String nota3 = JOptionPane.showInputDialog("Nota 3:");
+		String disciplina4 = JOptionPane.showInputDialog("Disciplina 4:");
 		String nota4 = JOptionPane.showInputDialog("Nota 4:");
 		
 		Aluno aluno1 = new Aluno();
+		
 		
 		aluno1.setNome(nome);
 		aluno1.setIdade(Integer.valueOf(idade));
@@ -35,16 +40,24 @@ public class PrimeiraClasseJava {
 		aluno1.setNomeEscola(nomeEscola);
 		aluno1.setDataMatricula(dataMatricula);
 		aluno1.setSerieMatriculado(serieMatriculado);
-		aluno1.setNota1(Integer.valueOf(nota1));
-		aluno1.setNota2(Integer.valueOf(nota2));
-		aluno1.setNota3(Integer.valueOf(nota3));
-		aluno1.setNota4(Integer.valueOf(nota4));
+		aluno1.setDisciplina1(disciplina1);
+		aluno1.setNota1(Double.parseDouble(nota1));
+		aluno1.setDisciplina2(disciplina2);
+		aluno1.setNota2(Double.parseDouble(nota2));
+		aluno1.setDisciplina3(disciplina3);
+		aluno1.setNota3(Double.parseDouble(nota3));
+		aluno1.setDisciplina4(disciplina4);
+		aluno1.setNota4(Double.parseDouble(nota4));
 		
-		System.out.println("Nome do aluno 1 = " + aluno1.getNome());
-		System.out.println("Idade = " + aluno1.getIdade() );
-		System.out.println("Data de Nascimento = " + aluno1.getDataNascimento());
-		System.out.println("Media do Aluno " + aluno1.getNome() + " " + aluno1.getMediaNota());
-		System.out.println("Resultado = " + (aluno1.getAprovado() ? "aprovado" : "Reprovado"));
+		
+		System.out.println(aluno1.toString());
+		System.out.println("Media do Aluno " + aluno1.getMediaNota());
+		System.out.println("Resultado: " + (aluno1.getAprovado()?"Aprovado":"Reprovado"));
+		
+	
+		
+
+	
 	}
 
 }
