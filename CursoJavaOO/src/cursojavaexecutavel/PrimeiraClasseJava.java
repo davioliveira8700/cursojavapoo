@@ -3,6 +3,8 @@ package cursojavaexecutavel;
 import javax.swing.JOptionPane;
 
 import cursojavaexecutavel.classes.Aluno;
+import cursojavaexecutavel.classes.Disciplina;
+
 
 public class PrimeiraClasseJava {
 	
@@ -18,14 +20,7 @@ public class PrimeiraClasseJava {
 		String nomeEscola = JOptionPane.showInputDialog("Nome da Escola?");
 		String dataMatricula = JOptionPane.showInputDialog("Data da matricula?");
 		String serieMatriculado = JOptionPane.showInputDialog("Serie matriculado(a)? ");
-		String disciplina1 = JOptionPane.showInputDialog("Disciplina 1:");
-		String nota1 = JOptionPane.showInputDialog("Nota 1:");
-		String disciplina2 = JOptionPane.showInputDialog("Disciplina 2:");
-		String nota2 = JOptionPane.showInputDialog("Nota 2:");
-		String disciplina3 = JOptionPane.showInputDialog("Disciplina 3:");
-		String nota3 = JOptionPane.showInputDialog("Nota 3:");
-		String disciplina4 = JOptionPane.showInputDialog("Disciplina 4:");
-		String nota4 = JOptionPane.showInputDialog("Nota 4:");
+
 		
 		Aluno aluno1 = new Aluno();
 		
@@ -40,14 +35,33 @@ public class PrimeiraClasseJava {
 		aluno1.setNomeEscola(nomeEscola);
 		aluno1.setDataMatricula(dataMatricula);
 		aluno1.setSerieMatriculado(serieMatriculado);
-		aluno1.setDisciplina1(disciplina1);
-		aluno1.setNota1(Double.parseDouble(nota1));
-		aluno1.setDisciplina2(disciplina2);
-		aluno1.setNota2(Double.parseDouble(nota2));
-		aluno1.setDisciplina3(disciplina3);
-		aluno1.setNota3(Double.parseDouble(nota3));
-		aluno1.setDisciplina4(disciplina4);
-		aluno1.setNota4(Double.parseDouble(nota4));
+	
+		Disciplina disciplina1 = new Disciplina();
+		disciplina1.setDisciplina("Banco de Dados");
+		disciplina1.setNota(90);
+		
+		aluno1.getDisciplinas().add(disciplina1);
+		
+		Disciplina disciplina2 = new Disciplina();
+		disciplina2.setDisciplina("Matematica");
+		disciplina2.setNota(80);
+		
+		aluno1.getDisciplinas().add(disciplina2);
+		
+		Disciplina disciplina3 = new Disciplina();
+		disciplina3.setDisciplina("Geografia");
+		disciplina3.setNota(65);
+		
+		aluno1.getDisciplinas().add(disciplina3);
+		
+		Disciplina disciplina4 = new Disciplina();
+		disciplina4.setDisciplina("Java Web");
+		disciplina4.setNota(70);
+		
+		aluno1.getDisciplinas().add(disciplina4);
+		
+		
+		
 		
 		
 		System.out.println(aluno1.toString());
