@@ -3,6 +3,8 @@ package cursojavaexecutavel.classes;
 import java.util.ArrayList;
 import java.util.List;
 
+import cursojavaexecutavel.constantes.StatusAluno;
+
 public class Aluno {
 
 	private String nome;
@@ -118,21 +120,19 @@ public class Aluno {
 		return somaNotas / disciplinas.size();
 	}
 
-	public boolean getAprovado() {
-		double media = this.getMediaNota();
-		if (media >= 70) {
-			return true;
-		} else {
-			return false;
-		}
-	}
+
 	public String getAprovado1() {
 		double media = getMediaNota();
-		if(media >=70) {
-			return "Aluno Aprovado!!";
-		}else {
-			return "Aluno reprovado";
-		}
+		if(media >=50){
+			if(media >=70 ) {
+				return StatusAluno.APROVADO;
+			}else {
+			return StatusAluno.RECUPERACAO;
+			}
+			}else {
+				return StatusAluno.REPROVADO;
+			}
+			
 		
 	}
 
